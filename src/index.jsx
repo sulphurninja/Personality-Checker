@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./stylesheet/index.css";
 import reportWebVitals from "./reportWebVitals";
-import ManageVideoOnCanvas from "./components/ManageVideoOnCanvas";
+import PersonalityCheck from "./components/PersonalityCheck";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<ManageVideoOnCanvas />);
+root.render(<PersonalityCheck  />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

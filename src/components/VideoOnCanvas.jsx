@@ -18,9 +18,8 @@ const VideoOnCanvas = (props: videoOnCanvasProps) => (
     />
     <Webcam
       audio={false}
-      width={0}
-      height={0}
-    
+      width={1920}
+      height={1080}
       ref={props.webcamRef}
       videoConstraints={props.constraints}
       style={{ display: "none" }}

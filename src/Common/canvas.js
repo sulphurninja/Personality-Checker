@@ -6,7 +6,7 @@ import {
 } from "../Constants/canvas.constant";
 
 const _setRectStyle = (context) => {
-  context.lineWidth = 0;
+  context.lineWidth = "0.8";
   context.strokeStyle = "transparent";
 };
 
@@ -36,37 +36,16 @@ const _getRectDim = (boundingBox, context) => {
 
 const _drawPanel = (context, boundingBox) => {
   const { x, y, width } = _getRectDim(boundingBox, context);
-  context.fillRect(x, y, width * 1.5, SIZE_EMOTION_PANEL);
-  const cornerRadius = 10; // Adjust the value to control the roundness
-
-  // Draw rounded corners before filling the rectangle
-  context.arc(x + cornerRadius, y + cornerRadius, cornerRadius, Math.PI, 1.5 * Math.PI);
-  context.arc(x + width * 1.5 - cornerRadius, y + cornerRadius, cornerRadius, 1.5 * Math.PI, 2 * Math.PI);
-  context.arc(x + width * 1.5 - cornerRadius, y + SIZE_EMOTION_PANEL - cornerRadius, cornerRadius, 0, 0.5 * Math.PI);
-  context.arc(x + cornerRadius, y + SIZE_EMOTION_PANEL - cornerRadius, cornerRadius, 0.5 * Math.PI, Math.PI);
-  
-  // Fill the rectangle
-  context.fillRect(x, y, width * 1.5, SIZE_EMOTION_PANEL);
-  
-  // Draw rounded corners after filling the rectangle
-  context.arc(x + cornerRadius, y + cornerRadius, cornerRadius, Math.PI, 1.5 * Math.PI, true);
-  context.arc(x + width * 1.5 - cornerRadius, y + cornerRadius, cornerRadius, 1.5 * Math.PI, 2 * Math.PI, true);
-  context.arc(x + width * 1.5 - cornerRadius, y + SIZE_EMOTION_PANEL - cornerRadius, cornerRadius, 0, 0.5 * Math.PI, true);
-  context.arc(x + cornerRadius, y + SIZE_EMOTION_PANEL - cornerRadius, cornerRadius, 0.5 * Math.PI, Math.PI, true);
-  
+  context.fillRect(x, y, width, SIZE_EMOTION_PANEL);
 };
 
 const _setFont = (context) => (context.font = SIZE_EMOTION_PANEL + "px serif");
 
 const _drawText = (context, text, boundingBox) => {
   const { x, y, width } = _getRectDim(boundingBox, context);
-  context.fillStyle = EMOTION_PANEL_COLOR;
-  context.textBaseline = "middle";
-  context.textAlign = "center";
-  context.font = SIZE_EMOTION_PANEL * 0.3 + "px serif"; // Adjust the font size as desired
-  context.fillText(text, x + width / 1.2, y + SIZE_EMOTION_PANEL / 2);
+  context.stroke();
+  context.fillText(text, x, y + SIZE_EMOTION_PANEL, width);
 };
-
 
 const _drawEmotionPanel = (context, boundingBox, prediction) => {
   _setFillStyle(context, EMOTION_PANEL_BG_COLOR);
