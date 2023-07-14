@@ -1,11 +1,11 @@
 const EMOTIONS = [
-  " Short Tempered : ",
-  "🤮 Annoying : ",
-  "😨 Coward : ",
-  "😄 Flamboyant : ",
-  "😐 Casual : ",
-  "😭 Sad : ",
-  "😯 Airport Look : ",
+  "🔥 Short Tempered : ",
+  "🙉 Annoying : ",
+  "🏃‍♂️ Coward : ",
+  "✨ Flamboyant : ",
+  "⌚ Casual : ",
+  "💔 Gloomy : ",
+  "💎 Airport Look : ",
 ];
 
 const NO_MODEL: string = "❌ model not loaded yet";
