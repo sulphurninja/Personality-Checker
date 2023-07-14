@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    background-color: black;
+    background-image: url('/public/bg.jpg');
+    background-size: 125%;
+
+}
+
+.canvas {
+    position: fixed;
+    height: 45%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 28%;
+    border-radius: 500px;
+   
+}
+
+.info {
+    text-align: center;
+    font-size: 400px;
+    position: fixed;
+    z-index: 2;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #FFBB1A;
+    border-radius: 20px;
+    padding: 5%;
+    margin-left: 22%;
+    margin-top: 5%;
+}
+
+.info button {
+    border-radius: 40px;
+    font-size: 110%;
+}
+
+.cameraSelector {
+    width: 100%;
+    font-size: 80%;
+}
+
+@media only screen and (max-device-width: 640px) {}
+
+@media only screen and (max-device-width: 768px) {
+    .info {
+        font-size: 120%;
+    }
+
+}
